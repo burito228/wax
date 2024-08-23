@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>JudgmentsPage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240823163118">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css?_v=20240823163118">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100..900&display=swap&_v=20240823163118" rel="stylesheet">
+
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="judgments-page">
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__content">
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li>
+									<a href="../index.html" class="header__navigation-item active">
+										Головна
+									</a>
+								</li>
+								<li>
+									<a href="../about.html" class="header__navigation-item">
+										Про проєкт
+									</a>
+								</li>
+								<li>
+									<a href="../judgments.html" class="header__navigation-item">
+										Вироки ВАКС
+									</a>
+								</li>
+								<li>
+									<a href="#" class="header__navigation-item">
+										Інші вироки
+									</a>
+								</li>
+								<li>
+									<a href="#" class="header__navigation-item">
+										Публікації
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__logo">
+						<a href="#">
+							<picture><source srcset="img/header/logo.webp" type="image/webp"><img src="img/header/logo.png" alt="logo"></picture>
+						</a>
+					</div>
+					<div class="header__center">
+						<nav>
+							<ul class="header__navigation">
+								<li>
+									<a href="index.html" class="header__navigation-item active">
+										Головна
+									</a>
+								</li>
+								<li>
+									<a href="about.html" class="header__navigation-item">
+										Про проєкт
+									</a>
+								</li>
+								<li>
+									<a href="judgments.html" class="header__navigation-item">
+										Вироки ВАКС
+									</a>
+								</li>
+								<li>
+									<a href="#" class="header__navigation-item">
+										Інші вироки
+									</a>
+								</li>
+								<li>
+									<a href="#" class="header__navigation-item">
+										Публікації
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header__right">
+						<div class="header__links">
+							<a href="#">
+								<i class="_icon-twitter-1"></i>
+							</a>
+							<a href="#">
+								<i class="_icon-facebook1"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__line"></div>
+				<div class="header__line"></div>
+				<div class="header__line"></div>
+			</div>
+		</header>
+		<main>
+			<section class="search">
+				<div class="search__container">
+					<div class="search__block">
+						<input type="text" class="search__block-item" placeholder="Пошук...">
+						<i class="_icon-search search__block-icon"></i>
+						<button class="search__block-btn">Пошук</button>
+					</div>
+				</div>
+			</section>
+			<section class="filter">
+				<div class="filter__container">
+					<div data-spollers class="spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title">Фільтри</summary>
+							<div class="spollers__body">
+								<div class="spollers__category">
+									<div class="spollers__category-block">
+										<h3>Категорія вироку</h3>
+										<div class="spollers__category-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Вироки по рокам</div>
+												</label>
+											</div>
+											<div class="spollers__category-subitem">
+												<select name="year">
+													<option value="2019">2019</option>
+													<option value="2020">2020</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="spollers__category-block">
+										<h3>Вироки по посадам</h3>
+										<div class="spollers__category-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Вироки по суддям</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Вироки по слідчим/прокурорам/адвокатам</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Вироки по депутатам</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Вироки по іншим категоріям</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers__type">
+									<div class="spollers__type-block">
+										<h3>Тип вироку</h3>
+										<div class="spollers__type-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Виправдувальний</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Обвинувальний</div>
+												</label>
+											</div>
+										</div>
+										<div class="spollers__type-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Угода</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Загальний порядок</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers__status spollers__type">
+									<div class="spollers__type-block">
+										<h3>Статус вироку</h3>
+										<div class="spollers__type-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Набрав законної сили</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Скасований</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Оскарження</div>
+												</label>
+											</div>
+										</div>
+										<div class="spollers__type-item">
+											<h3>Конфіскація майна</h3>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Так</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Ні</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers__punishment">
+									<div class="spollers__punishment-block">
+										<h3>Призначене покарання</h3>
+										<div class="spollers__punishment-item">
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Реальне позбавлення волі</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Умовне позбавлення волі із іспитовим строком</div>
+												</label>
+											</div>
+											<div class="checkboxes__item">
+												<label class="checkbox style-c">
+													<input type="checkbox" />
+													<div class="checkbox__checkmark"></div>
+													<div class="checkbox__body">Інше покарання</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="spollers__article">
+									<div class="spollers__article-block">
+										<h3>Стаття КК України</h3>
+										<table class="spollers__article-table">
+											<tr>
+												<td><input type="checkbox" id="cb1"><label for="cb1">191</label></td>
+												<td><input type="checkbox" id="cb2"><label for="cb2">206-2</label></td>
+												<td><input type="checkbox" id="cb3"><label for="cb3">209</label></td>
+												<td><input type="checkbox" id="cb4"><label for="cb4">210</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb5"><label for="cb5">354</label></td>
+												<td><input type="checkbox" id="cb6"><label for="cb6">364</label></td>
+												<td><input type="checkbox" id="cb7"><label for="cb7">366</label></td>
+												<td><input type="checkbox" id="cb8"><label for="cb8">366-2</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb9"><label for="cb9">366-3</label></td>
+												<td><input type="checkbox" id="cb10"><label for="cb10">368</label></td>
+												<td><input type="checkbox" id="cb11"><label for="cb11">368-5</label></td>
+												<td><input type="checkbox" id="cb12"><label for="cb12">369</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb13"><label for="cb13">369-2</label></td>
+												<td><input type="checkbox" id="cb14"><label for="cb14">410</label></td>
+												<td><input type="checkbox" id="cb15"><label for="cb15">368-5</label></td>
+												<td><input type="checkbox" id="cb16"><label for="cb16">369</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb17"><label for="cb17">206-2</label></td>
+												<td><input type="checkbox" id="cb18"><label for="cb18">206-2</label></td>
+												<td><input type="checkbox" id="cb19"><label for="cb19">206-2</label></td>
+												<td><input type="checkbox" id="cb20"><label for="cb20">206-2</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb21"><label for="cb21">206-2</label></td>
+												<td><input type="checkbox" id="cb22"><label for="cb22">206-2</label></td>
+												<td><input type="checkbox" id="cb23"><label for="cb23">206-2</label></td>
+												<td><input type="checkbox" id="cb24"><label for="cb24">206-2</label></td>
+											</tr>
+											<tr>
+												<td><input type="checkbox" id="cb25"><label for="cb25">206-2</label></td>
+												<td><input type="checkbox" id="cb26"><label for="cb26">206-2</label></td>
+												<td><input type="checkbox" id="cb27"><label for="cb27">206-2</label></td>
+												<td><input type="checkbox" id="cb28"><label for="cb28">206-2</label></td>
+											</tr>
+										</table>
+										<button class="judges__btn" type="button">Застосувати</button>
+									</div>
+								</div>
+							</div>
+						</details>
+					</div>
+					<div class="filter__wrapper">
+						<div class="filter__wrapper-item">
+							<div class="filter__empty"></div>
+							<div class="filter__pages">
+								<div class="filter__pages-item">
+									<p>Показувати по</p>
+								</div>
+								<ul class="filter__pages-item">
+									<li class="filter__pages-btn active">
+										<a href="#">10</a>
+									</li>
+									<li class="filter__pages-btn">
+										<a href="#">20</a>
+									</li>
+									<li class="filter__pages-btn">
+										<a href="#">50</a>
+									</li>
+									<li class="filter__pages-btn">
+										<a href="#">Всі</a>
+									</li>
+								</ul>
+							</div>
+							<div class="filter__sort" data-da=".spollers,767,2">
+								<div class="filter__sort-item">
+									<p>Сортувати за </p>
+								</div>
+								<div class="filter__sort-item custom-select">
+									<select name="sort">
+										<option value="new">Найновіші</option>
+										<option value="old">Найстаріші</option>
+										<option value="az">Від А до Я</option>
+										<option value="za">Від Я до А</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="judges">
+				<div class="judges__container">
+					<div class="judges__list">
+						<div class="judges__number">
+							<h3>N</h3>
+							<p><span>1</span></p>
+							<p><span>2</span></p>
+							<p><span>3</span></p>
+							<p><span>4</span></p>
+							<p><span>5</span></p>
+							<p><span>6</span></p>
+							<p><span>7</span></p>
+							<p><span>8</span></p>
+							<p><span>9</span></p>
+							<p><span>10</span></p>
+						</div>
+						<div class="judges__fname">
+							<h3>ПІБ обвинувачених</h3>
+							<div class="judges__fname-block">
+								<a href="judgments-single.html">
+									<p>Левківський Олександр Степанович та Марисик Юрій Васильович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>1</div>
+											<a href="#">Левківський Олександр Степанович та Марисик Юрій Васильович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Рева Любов Петрівна та Замрикот Максим Анатолійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>2</div>
+											<a href="#">Матюшко Олександр Анатолійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Плевако Олег Петрович, Поліщук Дмитро Володимирович та Онопрійчук Анатолій Кирилович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>3</div>
+											<a href="#">Чернобай Сергій Сергійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Матюшко Олександр Анатолійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>4</div>
+											<a href="#">Матюшко Олександр Анатолійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Чернобай Сергій Сергійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>5</div>
+											<a href="#">Чернобай Сергій Сергійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Матюшко Олександр Анатолійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>6</div>
+											<a href="#">Матюшко Олександр Анатолійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Чернобай Сергій Сергійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>7</div>
+											<a href="#">Чернобай Сергій Сергійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Матюшко Олександр Анатолійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>8</div>
+											<a href="#">Матюшко Олександр Анатолійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Левківський Олександр Степанович та Марисик Юрій Васильович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>9</div>
+											<a href="#">Левківський Олександр Степанович та Марисик Юрій Васильович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+							<div class="judges__fname-block">
+								<a href="#">
+									<p>Матюшко Олександр Анатолійович</p>
+								</a>
+								<div data-spollers="480, max" data-spoller-close data-one-spoller class="spollers">
+									<details class="spollers__item">
+										<summary class="spollers__title">
+											<div>10</div>
+											<a href="#">Матюшко Олександр Анатолійович</a>
+										</summary>
+										<div class="spollers__body">
+											<div class="spollers__body-block">
+												<h4>Дата ухвалення</h4>
+												<p>28.08.2020</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Колегія суддів</h4>
+												<ul>
+													<li>Олексій Кравчук</li>
+													<li>Інна Білоус</li>
+													<li>Євген Крук</li>
+												</ul>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Вирок</h4>
+												<p>Обвинувальний</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Поточний статус</h4>
+												<p>Скасовано</p>
+											</div>
+											<div class="spollers__body-block">
+												<h4>Посилання на вирок</h4>
+												<a href="#" class="spollers__body-link"></a>
+											</div>
+										</div>
+									</details>
+								</div>
+							</div>
+						</div>
+						<div class="judges__date">
+							<h3>Дата ухвалення</h3>
+							<p><span>28.08.2020</span></p>
+							<p><span>25.09.2020</span></p>
+							<p><span>27.07.2016</span></p>
+							<p><span>25.09.2020</span></p>
+							<p><span>27.07.2016</span></p>
+							<p><span>27.07.2016</span></p>
+							<p><span>25.09.2020</span></p>
+							<p><span>28.08.2020</span></p>
+							<p><span>25.09.2020</span></p>
+							<p><span>28.08.2020</span></p>
+						</div>
+						<div class="judges__board">
+							<div class="judges__board-item custom-select">
+								<select name="board">
+									<option disabled="" selected="" value="">Колегія суддів</option>
+									<option value="">Кравчук О.</option>
+									<option value="1">Білоус І.</option>
+									<option value="2">Коліуш О.</option>
+									<option value="3">Дубас В.</option>
+									<option value="4">Ткаченко О.</option>
+									<option value="5">Кравчук О.</option>
+									<option value="6">Коліуш О.</option>
+									<option value="7">Кравчук О.</option>
+									<option value="8">Білоус І.</option>
+									<option value="9">Коліуш О.</option>
+									<option value="10">Дубас В.</option>
+									<option value="11">Ткаченко О.</option>
+									<option value="12">Кравчук О.</option>
+									<option value="13">Коліуш О.</option>
+								</select>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+							<div class="judges__board-block">
+								<ul>
+									<li><a href="#">Олексій Кравчук</a></li>
+									<li><a href="#">Інна Білоус</a></li>
+									<li><a href="#">Євген Крук</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="judges__sentence">
+							<h3>Вирок</h3>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+							<p><span>Обвинувальний</span></p>
+						</div>
+						<div class="judges__status">
+							<h3>Поточний статус</h3>
+							<div class="judges__status-block judges__status-approved">
+								<p>Вирок набрав законної сили <span>11.01.2021</span></p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-default">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+							<div class="judges__status-block judges__status-closed">
+								<p>Скасовано</p>
+							</div>
+						</div>
+						<div class="judges__links">
+							<h3>Посилання на вирок</h3>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+							<div class="judges__links-block">
+								<a href="#"></a>
+							</div>
+						</div>
+					</div>
+					<div class="judges__pagination">
+						<div class="judges__pagination-more">
+							<button class="judges__btn" type="button">Показати ще</button>
+						</div>
+						<!-- <div class="judges__pagination-pages">
+								<button class="judges__pagination-btn" type="button" disabled>Назад</button>
+								<div class="judges__pagination-nav">
+									<button type="button" disabled><i class="_icon-left"></i></button>
+									<button class="filter__pages-btn active" type="button">1</button>
+									<button class="filter__pages-btn" type="button">2</button>
+									<button class="filter__pages-btn" type="button">3</button>
+									<input type="text" name="num" placeholder="...">
+									<button class="filter__pages-btn" type="button">25</button>
+									<button type="button"><i class="_icon-right"></i></button>
+								</div>
+								<button class="judges__pagination-btn" type="button">Вперед</button>
+							</div> -->
+						<ul class="judges__pagination-pages">
+							<li class="filter__pages-btn prev">
+								<a href="http://vyroky.maidan-judges.info/judgments/?&amp;page=2">
+									<span>Назад</span>
+									<i class="_icon-left"></i>
+								</a>
+							</li>
+							<li class="filter__pages-btn number">
+								<a href="http://vyroky.maidan-judges.info/judgments/?&amp;page=1">1</a>
+							</li>
+							<li class="filter__pages-btn number">
+								<a href="http://vyroky.maidan-judges.info/judgments/?&amp;page=2">2</a>
+							</li>
+							<li class="filter__pages-btn active">3</li>
+							<li class="filter__pages-btn number">
+								<a href="http://vyroky.maidan-judges.info/judgments/?&amp;page=4">4</a>
+							</li>
+							<li class="filter__pages-btn next">
+								<a href="http://vyroky.maidan-judges.info/judgments/?&amp;page=4">
+									<i class="_icon-right"></i>
+									<span>Вперед</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<button type="button" class="judges__container-btn"><i class="_icon-chevron-up"></i></button>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__nav" data-da=".footer__container,1240,2">
+				<ul>
+					<li>
+						<a href="#">Головна</a>
+					</li>
+					<li>
+						<a href="#">Про проект</a>
+					</li>
+					<li>
+						<a href="#">Вироки ВАКС</a>
+					</li>
+					<li>
+						<a href="#">Інші вироки</a>
+					</li>
+					<li>
+						<a href="#">Публікації</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__container">
+				<div class="footer__content">
+					<div class="footer__logo" data-da=".footer__center-block,767,3">
+						<a href="#">
+							<picture><source srcset="img/footer/footerlogo.webp" type="image/webp"><img src="img/footer/footerlogo.png" alt="footerlogo"></picture>
+						</a>
+					</div>
+					<div class="footer__center">
+						<ul class="footer__center-block">
+							<li>
+								<a href="mailto:office@automaidan.org"><i class="_icon-mail"></i>office@automaidan.org</a>
+							</li>
+							<li>
+								<p><i class="_icon-mappointer"></i>м. Київ, вул. Ярославська 11, офіс 3</p>
+							</li>
+							<li>
+								<p><i class="_icon-home"></i>а/с 31, м.Київ, 04071</p>
+							</li>
+							<div class="footer__center-link">
+								<p>Follow us</p>
+								<a href="#">
+									<i class="_icon-twitter-1"></i>
+								</a>
+								<a href="#">
+									<i class="_icon-facebook1"></i>
+								</a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.1.js?_v=20240823163118"></script>
+	<script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js?_v=20240823163118"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20240823163118"></script>
+	<script src="js/app.min.js?_v=20240823163118"></script>
+</body>
+
+</html>
